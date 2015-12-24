@@ -1,0 +1,54 @@
+{
+  "manifest_version": 2,
+  "name": "Core Extension",
+  "version": "1.0",
+  "offline_enabled": true,
+  "content_scripts": [
+    {
+      "matches": [ "*://*.trello.com/b/*", "*://*.trello.com/c/*" ],
+      "js": [
+        "lib/Moment.js",
+        "lib/jquery-1.9.1.js",
+        "lib/pikaday/pikaday.jquery.js",
+        "lib/pikaday/pikaday.js",
+        "lib/bootstrap-typeahead.js",
+        "lib/Moment-with-locales.js",
+        "lib/pt-br.js",
+        "lib/trello.js",
+        "lib/githubapi.js",
+        "lib/TrelloRequests.js",
+        "Models/CommentModel.js",
+        "Models/ColumnModel.js",
+        "Models/CardModel.js",
+        "Models/BoardModel.js",
+        "Models/PullRequestModel.js",
+        "ViewModel/CardViewModel.js",
+        "Data/TrelloCommentDataSource.js",
+        "BO/TrelloCardBO.js",
+        "Web/TrelloToolbar.js",
+        "web/TrelloToolbarButton.js",
+        "Web/TrelloWeb.js",
+        "content.js"
+      ],
+      "css": [
+        "css/bootstrap.css",
+        "lib/pikaday/pikaday.css",
+        "css/chromeExtension.css"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    "lib/jquery-ui-1.11.4.custom/images/*.png",
+    "lib/jquery-ui-1.11.4.custom/external/jquery/jquery.js"
+  ],
+  "permissions": [
+    "https://trello.com/b/",
+    "https://trello.com/c/",
+    "https://api.github.com/",
+    "https://api.trello.com/",
+    "https://github-oauth-proxy.jit.su/"
+  ]
+
+}

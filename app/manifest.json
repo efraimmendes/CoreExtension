@@ -7,11 +7,9 @@
     {
       "matches": [ "*://*.trello.com/b/*", "*://*.trello.com/c/*" ],
       "js": [
-        "lib/Moment.js",
-        "lib/jquery-1.9.1.js",
-        "lib/pikaday/pikaday.jquery.js",
-        "lib/pikaday/pikaday.js",
-        "lib/bootstrap-typeahead.js",
+        "lib/Packages/bower_components/moment/src/moment.js",
+        "lib/Packages/bower_components/jquery-1.9.1/index.js",
+        "lib/Packages/bower_components/pikaday/pikaday.js",
         "lib/Moment-with-locales.js",
         "lib/pt-br.js",
         "lib/trello.js",
@@ -32,7 +30,8 @@
       ],
       "css": [
         "css/bootstrap.css",
-        "lib/pikaday/pikaday.css",
+        "lib/Packages/bower_components/jquery-1.9.1/index.js",
+        "lib/Packages/bower_components/pikaday/css/pikaday.css",
         "css/chromeExtension.css"
       ],
       "run_at": "document_idle",

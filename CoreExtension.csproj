@@ -48,12 +48,8 @@
     <Content Include="app\Data\TrelloCommentDataSource.js" />
     <Content Include="app\img\icon.png" />
     <Content Include="app\img\playButton.png" />
-    <Content Include="app\lib\bootstrap-typeahead.js" />
     <Content Include="app\lib\githubApi.js" />
-    <Content Include="app\lib\jquery-1.9.1.js" />
     <Content Include="app\lib\Moment-with-locales.js" />
-    <Content Include="app\lib\PikaDay\pikaday.css" />
-    <Content Include="app\lib\PikaDay\pikaday.js" />
     <Content Include="app\lib\pt-br.js" />
     <Content Include="app\lib\Requests.js" />
     <Content Include="app\lib\trello.js" />
@@ -75,14 +71,12 @@
     <Content Include="index.htm" />
     <Content Include="Properties\build\ligershark.chrome.targets" />
     <Content Include="screenshots\readme.txt" />
+    <Content Include="app\lib\Packages\bower.json" />
     <None Include="scripts\_references.js" />
     <None Include="scripts\chrome-api-vsdoc.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\manifest.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="app\lib\PikaDay\pikaday.jquery.js" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -125,7 +119,7 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\lib\Moment.js" />
+    <Folder Include="app\lib\Packages\bower_components\" />
   </ItemGroup>
   <PropertyGroup>
     <LigerSharkChromeTargetsPath>$(BuildFolder)\ligershark.chrome.targets</LigerSharkChromeTargetsPath>

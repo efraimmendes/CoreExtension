@@ -1,0 +1,29 @@
+{
+  "name": "CoreExtension",
+  "homepage": "https://github.com/efraimmendes/CoreExtension",
+  "authors": [
+    "Efraim Mendes <efraimmendes@hotmail.com>"
+  ],
+  "description": "Extensão do Google Chrome do Core",
+  "main": "",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-1.9.1": "http://code.jquery.com/jquery-1.9.1.js",
+    "pikaday": "https://github.com/dbushell/pikaday.git#~1.4.0",
+    "moment": "https://github.com/moment/moment.git#~2.10.6"
+  }
+}

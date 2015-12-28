@@ -8,7 +8,7 @@
         "version": 1,
         "apiEndpoint": "https://api.trello.com",
         "authEndpoint": "https://trello.com",
-        "key": "672a22a6929fe4bf83663d118e748cd3"
+        "key": "0d7b7e9e85015b6206aa086d2900fa49"
     };
     (function() {
         var h, v, w, j, x, y = [].slice;

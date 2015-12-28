@@ -7,7 +7,7 @@
     {
       "matches": [ "*://*.trello.com/b/*", "*://*.trello.com/c/*" ],
       "js": [
-        "lib/Packages/bower_components/moment/src/moment.js",
+        "lib/Packages/bower_components/moment/index.js",
         "lib/Packages/bower_components/jquery-1.9.1/index.js",
         "lib/Packages/bower_components/pikaday/pikaday.js",
         "lib/Moment-with-locales.js",

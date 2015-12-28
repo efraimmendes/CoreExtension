@@ -24,6 +24,6 @@
   "dependencies": {
     "jquery-1.9.1": "http://code.jquery.com/jquery-1.9.1.js",
     "pikaday": "https://github.com/dbushell/pikaday.git#~1.4.0",
-    "moment": "https://github.com/moment/moment.git#~2.10.6"
+    "moment": "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"
   }
 }

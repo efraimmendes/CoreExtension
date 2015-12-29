@@ -1,6 +1,12 @@
 ﻿window.BO = window.BO || {};
 (function (window) {
-    var trelloCardBo = function () { }
+
+    var trelloCardBo = function () {
+        var self = this;
+
+        this.strHourPattern = /[0-2]?[0-9]:[0-5]?[0-9]/;
+        this.strDatePattern = /[0-3][0-9]\/[0-1][0-2]\/[0-9][0-9][0-9][0-9]/;
+    }
     function getCardShortLik() {
         var pathparts = location.pathname.split("/");
         return pathparts[2];
@@ -19,7 +25,8 @@
                 successCallback(cardViewModel);
         });
     }
-    trelloCardBo.prototype.StopCard = function(data, hora) {
+
+    trelloCardBo.prototype.StopCard = function (data, hora) {
         Data.TrelloCommentDataSource.prototype.Insert(getCardShortLik(), ">parar em " + data+" "+hora);
     }
 

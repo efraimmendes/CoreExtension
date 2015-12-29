@@ -1,11 +1,13 @@
 ﻿var comentList = [];
 var cartaoAtual = new window.ViewModel.CardViewModel();
 
-var observableCommentStatus = new MutationObserver(function() {
-    window.BO.TrelloCardBO.prototype.CardInformation(cartaoAtual, function (cartaoAtualizado) {
-        cartaoAtual = cartaoAtualizado;
-        TrelloWeb.prototype.UpdateStatusButton(cartaoAtualizado);
-    });
+var observableCommentStatus = new MutationObserver(function () {
+    var interval = setTimeout(function () {
+        window.BO.TrelloCardBO.prototype.CardInformation(cartaoAtual, function (cartaoAtualizado) {
+            cartaoAtual = cartaoAtualizado;
+            TrelloWeb.prototype.UpdateStatusButton(cartaoAtualizado);
+        });
+    }, 1000);
 
 });
 

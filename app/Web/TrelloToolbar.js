@@ -18,13 +18,13 @@
     function renderizeButtons(callBackfunction) {
         $("#toolbarButtonList").empty();
         ListButton.forEach(function (item) {
-            var btn = new window.TrelloUI.TrelloToolBarButton(item);
-            $("#toolbarButtonList").append(btn.GetHtmlButton());
+            $("#toolbarButtonList").append(item.GetHtmlButton());
             $("#" + item.Id).click(function() { callBackfunction(this)});
         });
     }
-    trelloToolbar.prototype.AddButton = function(toolbarButton, callBackfunction) {
-        self.ListButton.push(toolbarButton);
+    trelloToolbar.prototype.AddButton = function (idButton, titleButton, callBackfunction) {
+        var btn = new window.TrelloUI.TrelloToolBarButton(idButton, titleButton);
+        self.ListButton.push(btn);
         renderizeButtons(callBackfunction);
     }
     trelloToolbar.prototype.RemoveButton = function (toolbarButton) {

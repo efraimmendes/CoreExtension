@@ -110,10 +110,7 @@
     }
     function mountToolBar() {
         var trelloBar = new window.TrelloUI.TrelloToolBar(null, "Integração", $(".window-sidebar")[0]);
-        var btn = new window.TrelloUI.TrelloToolBarButton();
-        btn.Id = "btTeste";
-        btn.Titulo = "Iniciar";
-        trelloBar.AddButton(btn, showMenuDataHora);
+        trelloBar.AddButton("btTeste","Iniciar", showMenuDataHora);
     }
     trelloWeb.prototype.UpdateStatusButton = updateStatusButton;
     trelloWeb.prototype.AddToolBar = function() {

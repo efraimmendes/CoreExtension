@@ -12,11 +12,7 @@
                    if (self.commentList == undefined)
                        return false;
                    var list = self.commentList;
-                   for (var i = list.length - 1; i >= 0; i--) {
-                       var msg = list[i].text;
-                       if ((msg == undefined) || (!self.GetWorkPatern(msg)))
-                           list.splice(i, 1);
-                   }
+                   self.getOnlyValidComents(list);
                    return list.length > 0 && self.GetWorkPatern(msg) == "inicia";
                }
 
@@ -30,8 +26,7 @@
        function getOnlyValidComents(list) {
            for (var i = list.length - 1; i >= 0; i--) {
                var msg = list[i].text;
-               if ((msg == undefined) || (!msg.toLowerCase().startsWith(">iniciar") &&
-                   !msg.toLowerCase().startsWith(">parar")))
+               if ((msg == undefined) || (!this.GetWorkPatern(msg)))
                    list.splice(i, 1);
            }
        }
@@ -39,11 +34,7 @@
            if (this.commentList == undefined)
                return false;
            var list = cardViewModel.commentList;
-           for (var i = list.length - 1; i >= 0; i--) {
-               var msg = list[i].text;
-               if ((msg == undefined) || (!this.GetWorkPatern(msg)))
-                   list.splice(i, 1);
-           }
+           getOnlyValidComents(list);
            this.started = list.length > 0 && this.GetWorkPatern(msg) == "inicia";
        }
        cardViewModel.prototype.GetWorkPatern = function getWorkPatern(text) {
